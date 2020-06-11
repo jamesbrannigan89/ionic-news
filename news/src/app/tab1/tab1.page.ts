@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import{ HttpClient} from '@angular/common/http';
+import { NewsApiService } from '../news-api.service';
+
 
 @Component({
   selector: 'app-tab1',
@@ -6,7 +9,18 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  articles; //variable articles
 
-  constructor() {}
+
+  constructor(private newsApi :NewsApiService ) {
+  }
+
+  ngOnInit() {
+    this.newsApi.getNews().subscribe((data)=>{
+      console.log(data);
+      this.articles = data['articles'];
+    });
+  }
+ 
 
 }
