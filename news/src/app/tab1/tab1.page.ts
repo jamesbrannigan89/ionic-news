@@ -16,7 +16,7 @@ export class Tab1Page {
   }
 
   ngOnInit() {
-    this.newsApi.getNews().subscribe((data)=>{
+    this.newsApi.getIrelandNews().subscribe((data)=>{
       console.log(data);
       this.articles = data['articles'];
     });
@@ -27,7 +27,7 @@ export class Tab1Page {
 
   { 
     country:'Ireland',
-    pageUrl:'/news-choices'
+    pageUrl:'/ireland-news'
 
   },
   { 

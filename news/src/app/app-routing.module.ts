@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'news-choices',
     loadChildren: () => import('./news-choices/news-choices.module').then( m => m.NewsChoicesPageModule)
+  },
+  {
+    path: 'ireland-news',
+    loadChildren: () => import('./ireland-news/ireland-news.module').then( m => m.IrelandNewsPageModule)
   }
 ];
 @NgModule({

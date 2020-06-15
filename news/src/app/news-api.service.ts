@@ -10,7 +10,7 @@ export class NewsApiService {
 
   
   constructor(private httpClient: HttpClient) { }
-  public getNews(){
+  public getIrelandNews(){
     return this.httpClient.get(`https://newsapi.org/v2/top-headlines?country=ie&apiKey=${this.API_KEY}`);
   }
 

@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar >
+  <ion-toolbar class="ion-text-center">
     <ion-title>
       Home
     </ion-title>
@@ -9,7 +9,7 @@
 <ion-content [fullscreen]="true">
 
   <div>
-    <ion-card class="cardStyle">
+    <ion-card class="cardStyle" no-padding>
       <ion-img [src]=""> </ion-img>
        <ion-card-header>
          <ion-card-title> Welcome </ion-card-title>
@@ -25,6 +25,8 @@
       
 
        </ion-card-content>
+       <ion-chip color="secondary" routerLink="/news-choices" class="moreNews">More News</ion-chip>
+
      </ion-card>
 
   </div>

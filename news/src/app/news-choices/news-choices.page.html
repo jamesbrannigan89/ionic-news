@@ -1,9 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>newsChoices</ion-title>
+  <ion-toolbar class="ion-text-center">
+  
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+   
+   
+
+    <ion-title>News</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-card *ngFor="let source of newsSources">
+  <ion-card-header>
+    <ion-card-title>{{source.country}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+   {{source.description}}
+  </ion-card-content>
+
+  <ion-chip  >
+    <ion-label color="secondary" routerLink={{source.pageUrl}} > {{source.country}}</ion-label>
+  </ion-chip>
+
+</ion-card>
 
 </ion-content>

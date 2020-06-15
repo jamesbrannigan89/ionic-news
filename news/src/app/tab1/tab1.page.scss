@@ -1,7 +1,19 @@
 .cardStyle{
-    --color:#3dc2ff;
+    --color:#black;
+    margin:0;
+   
+    
 }
 
 ion-card-title{
-    --color:#3dc2ff;
+    --color:black;
+}
+
+ion-button{
+    --background:#3dc2ff;
+    color: white;
+}
+
+.moreNews{
+    margin-left: 25%;
 }
