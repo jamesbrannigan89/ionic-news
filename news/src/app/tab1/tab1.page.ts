@@ -23,4 +23,28 @@ export class Tab1Page {
   }
  
 
+  news=[
+
+  { 
+    country:'Ireland',
+    pageUrl:'/news-choices'
+
+  },
+  { 
+    country:'UK',
+    pageUrl:'/news-choices'
+
+  },
+
+  { 
+    country:'France',
+    pageUrl:'/news-choices'
+
+  },
+
+  
+
+
+  ]
+
 }

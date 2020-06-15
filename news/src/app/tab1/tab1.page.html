@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar >
     <ion-title>
       Home
     </ion-title>
@@ -8,15 +8,22 @@
 
 <ion-content [fullscreen]="true">
 
-  <div *ngFor="let article of articles">
-    <ion-card >
-      <ion-img [src]="article.urlToImage"> </ion-img>
+  <div>
+    <ion-card class="cardStyle">
+      <ion-img [src]=""> </ion-img>
        <ion-card-header>
-         <ion-card-title> {{article.title}}</ion-card-title>
+         <ion-card-title> Welcome </ion-card-title>
+         <h3>Select your choice of News</h3>
        </ion-card-header>
      
        <ion-card-content>
-          {{article.description}}
+
+        <ion-chip  *ngFor="let source of news">
+          <ion-label color="secondary" routerLink={{source.pageUrl}} > {{source.country}}</ion-label>
+        </ion-chip>
+
+      
+
        </ion-card-content>
      </ion-card>
 
