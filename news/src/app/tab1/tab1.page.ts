@@ -16,7 +16,7 @@ export class Tab1Page {
   }
 
   ngOnInit() {
-    this.newsApi.getIrelandNews().subscribe((data)=>{
+    this.newsApi.getHealthNews().subscribe((data)=>{
       console.log(data);
       this.articles = data['articles'];
     });
@@ -27,18 +27,23 @@ export class Tab1Page {
 
   { 
     country:'Ireland',
-    pageUrl:'/ireland-news'
+    pageUrl:'/ireland-news',
+    image:'/assets/images/ireland.jpg',
+
 
   },
   { 
     country:'UK',
-    pageUrl:'/news-choices'
+    pageUrl:'/news-choices',
+    image:'/assets/images/uj.jpg',
+
 
   },
 
   { 
     country:'France',
-    pageUrl:'/news-choices'
+    pageUrl:'/news-choices',
+    image:'/assets/images/france.jpg',
 
   },
 

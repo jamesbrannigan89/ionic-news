@@ -15,5 +15,8 @@ export class NewsApiService {
   }
 
  
+  public getHealthNews(){
+    return this.httpClient.get(`http://newsapi.org/v2/top-headlines?country=ie&category=health&apiKey=${this.API_KEY}`)
+  }
 
 }
