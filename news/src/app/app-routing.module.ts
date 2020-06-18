@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'ireland-news',
     loadChildren: () => import('./ireland-news/ireland-news.module').then( m => m.IrelandNewsPageModule)
+  },
+  {
+    path: 'uk',
+    loadChildren: () => import('./uk/uk.module').then( m => m.UKPageModule)
   }
 ];
 @NgModule({

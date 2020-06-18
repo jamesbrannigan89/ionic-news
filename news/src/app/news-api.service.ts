@@ -8,15 +8,24 @@ import { HttpClient } from '@angular/common/http';
 export class NewsApiService {
   API_KEY ='378c91a64d5f488aa904eb13773d989e';
 
+
   
   constructor(private httpClient: HttpClient) { }
   public getIrelandNews(){
     return this.httpClient.get(`https://newsapi.org/v2/top-headlines?country=ie&apiKey=${this.API_KEY}`);
   }
 
+  public getUkNews(){
+    return this.httpClient.get(`http://newsapi.org/v2/top-headlines?country=gb&apiKey=378c91a64d5f488aa904eb13773d989e`);
+  }
+
  
   public getHealthNews(){
     return this.httpClient.get(`http://newsapi.org/v2/top-headlines?country=ie&category=health&apiKey=${this.API_KEY}`)
+  }
+
+  public getSportNews(){
+    return this.httpClient.get(`http://newsapi.org/v2/top-headlines?country=ie&category=sports&apiKey=${this.API_KEY}`)
   }
 
 }

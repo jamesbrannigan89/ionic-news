@@ -8,47 +8,25 @@
 
 <ion-content [fullscreen]="true">
 
+ <ion-chip  routerLink="/news-choices" class="moreNews">More News</ion-chip>
 
 
+    <div>
+      <ion-title class="title">Sport News</ion-title>
+      <ion-card *ngFor="let article of articles">
+        <ion-card-header>
+          <ion-img [src]="article.urlToImage"></ion-img>
+          <ion-card-subtitle>{{article.publishedAt | date}}</ion-card-subtitle>
 
-  <div >
+          <ion-card-title>{{article.title}}</ion-card-title>
+        </ion-card-header>
 
-
-    <ion-item *ngFor="let source of news">
-      <ion-thumbnail slot="start">
-        <ion-img src={{source.image}}></ion-img>
-      </ion-thumbnail>
-      <ion-chip>
-        <ion-label color="secondary" routerLink={{source.pageUrl}}> {{source.country}}</ion-label>
-      </ion-chip>
-
-      <ion-label class="label"></ion-label>
-    </ion-item>
-
-    <ion-chip color="secondary" routerLink="/news-choices" class="moreNews">More News</ion-chip>
-
-
-  </div>
-
-
-
-
-
-  <div>
-    <ion-card *ngFor="let article of articles">
-      <ion-card-header>
-        <ion-img [src]="article.urlToImage"></ion-img>
-        <ion-card-subtitle>{{article.publishedAt | date}}</ion-card-subtitle>
-
-        <ion-card-title>{{article.title}}</ion-card-title>
-      </ion-card-header>
-
-      <ion-card-content>
-        {{article.description}}
-        <a href="{{article.url}}">Read full article</a>
-      </ion-card-content>
-    </ion-card>
-  </div>
+        <ion-card-content class="Articledescription">
+          {{article.description}}
+          <a href="{{article.url}}">Read full article</a>
+        </ion-card-content>
+      </ion-card>
+    </div>
 
 
 

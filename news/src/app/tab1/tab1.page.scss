@@ -1,20 +1,30 @@
-
-
-
-
 ion-card-title{
     --color:black;
+    
 }
 
-ion-button{
-    --background:#3dc2ff;
-    color: white;
+.Articledescription{
+    --color:#3dc2ff;
 }
+
+
 
 .moreNews{
     margin-left: 35%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-family: sans-serif;
+    --color:#3dc2ff;
+    --background:white;
+
+
 }
 
+.title{
+    text-align: center;
+    margin-top: 5%;
+    --color:white;
+}
 ion-chip{
     margin-left: 2%;
 }

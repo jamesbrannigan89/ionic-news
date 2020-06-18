@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import{ HttpClient} from '@angular/common/http';
+import { NewsApiService } from '../news-api.service';
 
 @Component({
   selector: 'app-news-choices',
@@ -7,16 +8,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news-choices.page.scss'],
 })
 export class NewsChoicesPage implements OnInit {
- 
+  articles; //variable articles
 
 
-  constructor() { }
+
+  constructor(private newsApi :NewsApiService) { }
 
   ngOnInit() {
-   
+    this.newsApi.getIrelandNews().subscribe((data)=>{
+      console.log(data);
+      this.articles = data['articles'];
+    });
   }
+  
 
-  newsSources=[
+
+
+
+  projects=[
 
     {
       country:"Irish News",
@@ -26,7 +35,7 @@ export class NewsChoicesPage implements OnInit {
 
     {
       country:"UK News",
-      pageUrl:"/ireland-news"
+      pageUrl:"/uk"
     },
 
     {

@@ -16,7 +16,7 @@ export class Tab1Page {
   }
 
   ngOnInit() {
-    this.newsApi.getHealthNews().subscribe((data)=>{
+    this.newsApi.getSportNews().subscribe((data)=>{
       console.log(data);
       this.articles = data['articles'];
     });
