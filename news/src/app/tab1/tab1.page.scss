@@ -1,23 +1,16 @@
 ion-card-title{
     --color:black;
-    
+}
+
+
+
+.buttonStyle{
+    --color: black;
+    --background:white;
 }
 
 .Articledescription{
     --color:#3dc2ff;
-}
-
-
-
-.moreNews{
-    margin-left: 35%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    font-family: sans-serif;
-    --color:#3dc2ff;
-    --background:white;
-
-
 }
 
 .title{
@@ -25,6 +18,4 @@ ion-card-title{
     margin-top: 5%;
     --color:white;
 }
-ion-chip{
-    margin-left: 2%;
-}
+

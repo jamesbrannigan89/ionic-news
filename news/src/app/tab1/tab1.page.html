@@ -1,17 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="ion-text-center">
-    <ion-title>
-      Home
-    </ion-title>
+
+    <ion-navbar>
+     
+  
+      <ion-title>
+       Home
+      </ion-title>
+      <ion-button class="buttonStyle"  *ngFor="let choice of newsChoice" routerLink={{choice.pageUrl}}>{{choice.country}}</ion-button>
+      
+
+    </ion-navbar>
+
+
+   
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
- <ion-chip  routerLink="/news-choices" class="moreNews">More News</ion-chip>
-
-
-    <div>
+    
+     <div>
       <ion-title class="title">Sport News</ion-title>
       <ion-card *ngFor="let article of articles">
         <ion-card-header>

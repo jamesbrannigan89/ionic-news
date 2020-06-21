@@ -23,27 +23,25 @@ export class Tab1Page {
   }
  
 
-  news=[
+  newsChoice=[
 
   { 
     country:'Ireland',
     pageUrl:'/ireland-news',
-    image:'/assets/images/ireland.jpg',
+   
 
 
   },
   { 
     country:'UK',
-    pageUrl:'/news-choices',
-    image:'/assets/images/uj.jpg',
+    pageUrl:'/uk',
 
 
   },
 
   { 
     country:'France',
-    pageUrl:'/news-choices',
-    image:'/assets/images/france.jpg',
+    pageUrl:'/french-news',
 
   },
 
