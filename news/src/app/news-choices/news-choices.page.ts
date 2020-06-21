@@ -30,17 +30,20 @@ export class NewsChoicesPage implements OnInit {
     {
       country:"Irish News",
       pageUrl:"/ireland-news",
-      description:"Keep up to date with your news from Ireland"
+      description:"Keep up to date with your news from Ireland",
+      imageUrl:'assets/images/ireland.jpg'
     },
 
     {
       country:"UK News",
-      pageUrl:"/uk"
+      pageUrl:"/uk",
+      imageUrl:'assets/images/uk.jpg'
     },
 
     {
       country:"France News",
-      pageUrl:"/ireland-news"
+      pageUrl:"/french-news",
+      imageUrl:'assets/images/france.jpg'
     },
 
     

@@ -16,10 +16,10 @@
 
   <ion-item *ngFor="let info of projects"> 
     <ion-thumbnail slot="start" >
-      <ion-img  [src]=""></ion-img>
+      <ion-img  src="{{info.imageUrl}}"></ion-img>
     </ion-thumbnail>
-    <ion-button routerLink="{{info.pageUrl}}"shape="round">{{info.country}}</ion-button>
-
+    <ion-button button-clear routerLink="{{info.pageUrl}}"shape="round">{{info.country}}</ion-button>
+    
     <ion-label> </ion-label>
   </ion-item>
 

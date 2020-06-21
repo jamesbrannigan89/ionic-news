@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path: 'uk',
     loadChildren: () => import('./uk/uk.module').then( m => m.UKPageModule)
+  },
+  {
+    path: 'french-news',
+    loadChildren: () => import('./french-news/french-news.module').then( m => m.FrenchNewsPageModule)
   }
 ];
 @NgModule({

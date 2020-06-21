@@ -19,6 +19,10 @@ export class NewsApiService {
     return this.httpClient.get(`http://newsapi.org/v2/top-headlines?country=gb&apiKey=378c91a64d5f488aa904eb13773d989e`);
   }
 
+  public getFrenchNews(){
+    return this.httpClient.get(`http://newsapi.org/v2/top-headlines?country=fr&apiKey=${this.API_KEY}`);
+  }
+
  
   public getHealthNews(){
     return this.httpClient.get(`http://newsapi.org/v2/top-headlines?country=ie&category=health&apiKey=${this.API_KEY}`)
